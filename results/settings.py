@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'sdid)kw2a*3b!b-7qj(i))bi0@1f3s52wyidwff)d!fk=5)b7w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,25 +77,25 @@ WSGI_APPLICATION = 'results.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'students',
-        'USER': 'root',
-        'PASSWORD': 'm1y3s5q7l9',
-        'HOST': 'resultsdb.cninslv9ojgr.us-west-2.rds.amazonaws.com',
-        'PORT': '3306'
-        
-    }
-}
-
-
 ##DATABASES = {
 ##    'default': {
-##        'ENGINE': 'django.db.backends.sqlite3',
-##        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+##        'ENGINE': 'django.db.backends.mysql',
+##        'NAME': 'students',
+##        'USER': 'root',
+##        'PASSWORD': 'm1y3s5q7l9',
+##        'HOST': 'resultsdb.cninslv9ojgr.us-west-2.rds.amazonaws.com',
+##        'PORT': '3306'
+##        
 ##    }
 ##}
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Internationalization
